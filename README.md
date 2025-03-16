@@ -33,4 +33,4 @@ Bias Detector is a lightweight Chrome extension designed to help users identify 
 
 1. **Clone or Download the Repository**
    ```bash
-   git clone https://github.com/your-username/bias-detector.git
+   git clone https://github.com/Ved54/Bias_Detector_extension.git
