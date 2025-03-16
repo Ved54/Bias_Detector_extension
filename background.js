@@ -1,5 +1,5 @@
 async function analyzeBiasWithGroq(content) {
-  const apiKey = "your-groq-api-key-here"; // Replace with your Groq API key
+  const apiKey = "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"; // Replace with your Groq API key
   const url = "https://api.groq.com/openai/v1/chat/completions";
 
   const response = await fetch(url, {
@@ -13,7 +13,10 @@ async function analyzeBiasWithGroq(content) {
       messages: [
         {
           role: "user",
-          content: `Analyze the following text for bias. Provide a brief assessment stating whether it appears biased and why also give percentage for the same:\n\n${content.substring(0, 2000)}` // Limit to avoid token issues
+          content: `Analyze the following text for bias. Provide only:
+          1. A percentage (0-100%) indicating the level of bias (0% = completely unbiased, 100% = extremely biased)
+          2. A short summary explaining why the text is biased, unbiased, or neutral.
+          Format your response as: "[percentage]% biased - [summary]"\n\n${content}` // Limit to avoid token issues
         }
       ],
       temperature: 1,

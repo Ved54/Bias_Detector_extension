@@ -4,19 +4,83 @@
   <title>Bias Detector</title>
   <style>
     body {
-      width: 200px;
-      padding: 10px;
-      font-family: Arial, sans-serif;
+      width: 250px;
+      padding: 20px;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+      color: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     }
-    #result {
-      margin-top: 10px;
+
+    h3 {
+      margin: 0 0 15px;
+      font-size: 24px;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #ffd700;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    }
+
+    #checkBias {
+      width: 100%;
+      padding: 10px;
+      background-color: #ffd700;
+      color: #1e3c72;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
       font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 3px 10px rgba(255,215,0,0.3);
+    }
+
+    #checkBias:hover {
+      background-color: #ffeb3b;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(255,215,0,0.5);
+    }
+
+    #checkBias:active {
+      transform: translateY(1px);
+      box-shadow: 0 2px 5px rgba(255,215,0,0.2);
+    }
+
+    #result {
+      margin-top: 15px;
+      padding: 10px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 10px;
+      text-align: center;
+      font-size: 14px;
+      backdrop-filter: blur(5px);
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .image-container {
+      margin: 15px 0;
+      text-align: center;
+    }
+
+    .detector-img {
+      max-width: 150px;
+      height: auto;
+      border-radius: 10px;
+      border: 2px solid #ffd700;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
     }
   </style>
 </head>
 <body>
   <h3>Bias Detector</h3>
   <button id="checkBias">Check Bias</button>
+  
+  <div class="image-container">
+    <img src="./images/icon48.png" alt="Bias Detector" class="detector-img">
+  </div>
+  
   <div id="result">Click to analyze</div>
   <script src="popup.js"></script>
 </body>
